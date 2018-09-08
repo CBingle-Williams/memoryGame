@@ -1,71 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Memory Game</title>
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="game_window">
-      <div class="centre">
-        <h2>Memory Game</h2>
-      </div>
-      <div id="game_info">
-        <div class="centre">
-          <p id="output"></p>
-        </div>
-        <div class="wrapper">
-          <div class="wrapper_contents">
-            <p id="counter">number of turns: 0</p>
-          </div>
-          <div class="wrapper_contents">
-            <p id="rating">Your rating: 3</p>
-          </div>
-          <div class="wrapper_contents">
-            <input type="button" value="Click to restart" id="restart">
-          </div>
-        </div>
-      </div>
-      <div id="canvas">
-        <div id="card_1" class="gameCards hidden"><h4>1</h4></div>
-        <div id="card_2" class="gameCards hidden"><h4>2</h4></div>
-        <div id="card_3" class="gameCards hidden"><h4>3</h4></div>
-        <div id="card_4" class="gameCards hidden"><h4>4</h4></div>
-        <div id="card_5" class="gameCards hidden"><h4>5</h4></div>
-        <div id="card_6" class="gameCards hidden"><h4>6</h4></div>
-        <div id="card_7" class="gameCards hidden"><h4>7</h4></div>
-        <div id="card_8" class="gameCards hidden"><h4>8</h4></div>
-        <div id="card_9" class="gameCards hidden"><h4>1</h4></div>
-        <div id="card_10" class="gameCards hidden"><h4>2</h4></div>
-        <div id="card_11" class="gameCards hidden"><h4>3</h4></div>
-        <div id="card_12" class="gameCards hidden"><h4>4</h4></div>
-        <div id="card_13" class="gameCards hidden"><h4>5</h4></div>
-        <div id="card_14" class="gameCards hidden"><h4>6</h4></div>
-        <div id="card_15" class="gameCards hidden"><h4>7</h4></div>
-        <div id="card_16" class="gameCards hidden"><h4>8</h4></div>
-      </div>
-      <div id="title_modal" class="modal">
-        <div class="modal_content">
-          <span class="close">&times;</span>
-            <p id="message"></p>
-            <input type="button" value="Click to replay" id="modal_button">
-        </div>
-      </div>
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="gameLogic.js"></script>
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-    </div>
-  </body>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GAMES</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/game.css";>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Games</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="HTML/flappyBird.html">Flappy Bird</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HTML/memoryGame.html">Memory Game</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="HTML/battleShips.html">Battleship</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <article class="wrap_horizontal projects">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-12 parent">
+                        <div class="hovereffect">
+                            <div class="mx-auto mt-5">
+                                <a href="HTML/flappyBird.html"><img class="img-fluid" src="IMG/flappy_Bird.png"></a>
+                                <div class="overlay">
+                                    <h2>Cick on the screen to avoid the pipes :)</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 parent">
+                        <div class="hovereffect">
+                            <div class="mx-auto mt-5">
+                                <a href="HTML/memoryGame.html"><img class="img-fluid" src="IMG/memoryGame.png"></a>
+                                <div class="overlay">
+                                    <h2>Find the matching cards!</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 parent">
+                        <div class="hovereffect">
+                            <div class="mx-auto mt-5">
+                                <a href="HTML/battleShips.html"><img class="img-fluid" src="IMG/battleships.jpg"></a>
+                                <div class="overlay">
+                                    <h2>Try and find the others players ship!</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
 </html>

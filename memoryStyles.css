@@ -1,0 +1,154 @@
+body {
+  background-color: #0e141b;
+}
+
+/* THE CANVAS HOLDS EVERYTHING */
+#canvas{
+  height: 700px;
+  width: 700px;
+  background-color: rgb(80,85,90);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  border: 0.6px solid rgb(215,230,250);
+}
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.gameCards{
+  width: 155px;
+  height: 155px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+.selected{
+  transform: rotateY(180deg);
+}
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background:
+  linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+  linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color:rgb(207,216,224);
+  background-size: 64px 128px
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  position: absolute;
+  width: 155px;
+  height: 155px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-color:#708090;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 155px;
+  font-size: 60px;
+}
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+.chosen {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+/*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+.incorrect {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.modal {
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+  display: none;
+  height: 700px;
+  width: 700px;
+  background-color: rgb(80,85,90);
+  border-radius: 10px;
+  margin: 0px auto;
+  border: 0.6px solid rgb(215,230,250);
+}
+
+.scoreTitle {
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  font-size: 65px;
+  color: rgb(215,230,250);
+}
+
+.score {
+  position: absolute;
+  top: 150px;
+  left: 45px;
+  font-size: 45px;
+}
+
+.restart {
+  position: absolute;
+  width: 210px;
+  height: 50px;
+  top: 295px;
+  left: 250px;
+  background-color: rgb(215,230,250);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 45px;
+  border-radius: 10px;
+}
